@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            line-height:100px;
+        }
+        .inputText{
+            width: 200px;
+            height: 30px;
+            margin-left: 10px;
+            font-size: 20px;
+            padding-left: 15px;
+            padding-right: 12px;
+            border-radius: 5px;
+            background-color: #FFF;
+            border: none;
+        }
+        .inputTextLabel{
+            color: #FFF;
+            font-size: 20px;
+        }
+        table {
+            margin: 0 auto;
+        }
+        .table1 td {
+            width: 80px;
+            height: 50px;
+            padding-left: 30px;
+            /* padding: 50px; */
+            position: relative;
+            text-align: left;
+            color: #FFF;
+        }
+        .table1 td:first-child {
+            width: 50px;
+        }
+        .table1 td img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .box-screen{
+            width: 350px;
+            height: 100px;
+            background-color: aliceblue;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .bigbox{
+            width: 400px;
+            height: 180px;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+        .bigbox-lr{
+            width: 80px;
+            height: 150px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .table2 td {
+            width: 30px;
+            height: 20px;
+            padding-left: 10px;
+            position: relative;
+            text-align: left;
+        }
+        .table2 td img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 700;
+            top: 10%;
+            transform: translateY(-10%);
+        }
+        .bigbox-cen{
+            width: 160px;
+            height: 150px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        p{
+            color: #FFF;
+            font-size: 20px;
+        }
+        p span{
+            color: aqua;
+        }
+        .end{
+            line-height:20px;
+        }
+
+        .btn {
+            /* 文字颜色 */
+            color: #0099CC; 
+            /* 清除背景色 */
+            background: transparent; 
+            /* 边框样式、颜色、宽度 */
+            border: 2px solid #0099CC;
+            /* 给边框添加圆角 */
+            border-radius: 6px; 
+            /* 字母转大写 */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .btn1 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+        }
+        /* 悬停样式 */
+        .btn1:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body bgcolor="#242430">
+    <!-- 开头 -->
+    <div class="box">
+        <label class="inputTextLabel" for="inputText">Pick a movie: </label>
+        <input type="text" class="inputText" id="inputText" value=""  disabled>
+    </div>
+    <!-- 中间 -->
+    <div class="box">
+        <table class="table1">
+            <tr>
+                <td><img src="img\ticket-NA.svg" alt="ticket-NA">N/A</td>
+                <td><img src="img\ticket-selected.svg" alt="ticket-selected">Selected</td>
+                <td><img src="img\ticket-occupied.svg" alt="ticket-occupied">Occupied</td>
+            </tr>
+        </table>
+    </div>
+    <!-- 屏幕 -->
+    <div class="box-screen"></div>
+    <!-- 座位 -->
+    <div class="bigbox">
+        <div class="bigbox-lr">
+            <table class="table2">
+                <tr>
+                    <td><img id="1-1" name="NA" src="img\ticket-NA.svg" alt="1-1"></td>
+                    <td><img id="1-2" name="NA" src="img\ticket-NA.svg" alt="1-2"></td>
+                </tr>
+                <tr>
+                    <td><img id="2-1" name="NA" src="img\ticket-NA.svg" alt="2-1"></td>
+                    <td><img id="2-2" name="NA" src="img\ticket-NA.svg" alt="2-2"></td>
+                </tr>
+                <tr>
+                    <td><img id="3-1" name="NA" src="img\ticket-NA.svg" alt="3-1"></td>
+                    <td><img id="3-2" name="NA" src="img\ticket-NA.svg" alt="3-2"></td>
+                </tr>
+                <tr>
+                    <td><img id="4-1" name="NA" src="img\ticket-NA.svg" alt="4-1"></td>
+                    <td><img id="4-2" name="NA" src="img\ticket-NA.svg" alt="4-2"></td>
+                </tr>
+                <tr>
+                    <td><img id="5-1" name="NA" src="img\ticket-NA.svg" alt="5-1"></td>
+                    <td><img id="5-2" name="NA" src="img\ticket-NA.svg" alt="5-2"></td>
+                </tr>
+                <tr>
+                    <td><img id="6-1" name="NA" src="img\ticket-NA.svg" alt="6-1"></td>
+                    <td><img id="6-2" name="NA" src="img\ticket-NA.svg" alt="6-2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="bigbox-cen">
+            <table class="table2">
+                <tr>
+                    <td><img id="1-3" name="NA" src="img\ticket-NA.svg" alt="1-3"></td>
+                    <td><img id="1-4" name="NA" src="img\ticket-NA.svg" alt="1-4"></td>
+                    <td><img id="1-5" name="NA" src="img\ticket-NA.svg" alt="1-5"></td>
+                    <td><img id="1-6" name="NA" src="img\ticket-NA.svg" alt="1-6"></td>
+                </tr>
+                <tr>
+                    <td><img id="2-3" name="NA" src="img\ticket-NA.svg" alt="2-3"></td>
+                    <td><img id="2-4" name="NA" src="img\ticket-NA.svg" alt="2-4"></td>
+                    <td><img id="2-5" name="NA" src="img\ticket-NA.svg" alt="2-5"></td>
+                    <td><img id="2-6" name="NA" src="img\ticket-NA.svg" alt="2-6"></td>
+                </tr>
+                <tr>
+                    <td><img id="3-3" name="NA" src="img\ticket-NA.svg" alt="3-3"></td>
+                    <td><img id="3-4" name="NA" src="img\ticket-NA.svg" alt="3-4"></td>
+                    <td><img id="3-5" name="NA" src="img\ticket-NA.svg" alt="3-5"></td>
+                    <td><img id="3-6" name="NA" src="img\ticket-NA.svg" alt="3-6"></td>
+                </tr>
+                <tr>
+                    <td><img id="4-3" name="NA" src="img\ticket-NA.svg" alt="4-3"></td>
+                    <td><img id="4-4" name="NA" src="img\ticket-NA.svg" alt="4-4"></td>
+                    <td><img id="4-5" name="NA" src="img\ticket-NA.svg" alt="4-5"></td>
+                    <td><img id="4-6" name="NA" src="img\ticket-NA.svg" alt="4-6"></td>
+                </tr>
+                <tr>
+                    <td><img id="5-3" name="NA" src="img\ticket-NA.svg" alt="5-3"></td>
+                    <td><img id="5-4" name="NA" src="img\ticket-NA.svg" alt="5-4"></td>
+                    <td><img id="5-5" name="NA" src="img\ticket-NA.svg" alt="5-5"></td>
+                    <td><img id="5-6" name="NA" src="img\ticket-NA.svg" alt="5-6"></td>
+                </tr>
+                <tr>
+                    <td><img id="6-3" name="NA" src="img\ticket-NA.svg" alt="6-3"></td>
+                    <td><img id="6-4" name="NA" src="img\ticket-NA.svg" alt="6-4"></td>
+                    <td><img id="6-5" name="NA" src="img\ticket-NA.svg" alt="6-5"></td>
+                    <td><img id="6-6" name="NA" src="img\ticket-NA.svg" alt="6-6"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="bigbox-lr">
+            <table class="table2">
+                <tr>
+                    <td><img id="1-7" name="NA" src="img\ticket-NA.svg" alt="1-7"></td>
+                    <td><img id="1-8" name="NA" src="img\ticket-NA.svg" alt="1-8"></td>
+                </tr>
+                <tr>
+                    <td><img id="2-7" name="NA" src="img\ticket-NA.svg" alt="2-7"></td>
+                    <td><img id="2-8" name="NA" src="img\ticket-NA.svg" alt="2-8"></td>
+                </tr>
+                <tr>
+                    <td><img id="3-7" name="NA" src="img\ticket-NA.svg" alt="3-7"></td>
+                    <td><img id="3-8" name="NA" src="img\ticket-NA.svg" alt="3-8"></td>
+                </tr>
+                <tr>
+                    <td><img id="4-7" name="NA" src="img\ticket-NA.svg" alt="4-7"></td>
+                    <td><img id="4-8" name="NA" src="img\ticket-NA.svg" alt="4-8"></td>
+                </tr>
+                <tr>
+                    <td><img id="5-7" name="NA" src="img\ticket-NA.svg" alt="5-7"></td>
+                    <td><img id="5-8" name="NA" src="img\ticket-NA.svg" alt="5-8"></td>
+                </tr>
+                <tr>
+                    <td><img id="6-7" name="NA" src="img\ticket-NA.svg" alt="6-7"></td>
+                    <td><img id="6-8" name="NA" src="img\ticket-NA.svg" alt="6-8"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 结尾 -->
+    <div class="box">
+        <p>You have select <span id="sum">0</span> seats for a price of $<span id="money">0</span></p>
+    </div>
+    <!-- 提交按钮 -->
+    <div class="box end">
+        <button class="btn btn1">submit</button>
+    </div>
+</body>
+    <script>
+        let bigbox = document.querySelector(".bigbox")
+        let imgs = bigbox.querySelectorAll("img")
+        let submit = document.querySelector(".btn")
+        let inputText = document.querySelector(".inputText")
+        let spanSum = document.querySelector("#sum")
+        let spanMoney = document.querySelector("#money")
+        // console.log(spanSum.innerHTML + '-' + spanMoney.innerHTML)
+
+        let letters = new Set();
+        let sum = 0
+        let money = 0
+
+        // 点击图片
+        imgs.forEach(function(img) {
+            img.addEventListener('click', function() {
+                if(img.name === 'NA'){
+                    // 换图片
+                    img.src = 'img/ticket-selected.svg'
+                    img.name = 'Selected'
+                    // 计算数量价格
+                    sum ++
+                    money = sum * 45
+                    spanSum.innerHTML = sum
+                    spanMoney.innerHTML = money
+                    // 文本框
+                    letters.add(img.id)
+                    // inputText.value = Array.from(letters).join(";")
+                    inputText.value = [...letters].join(";")
+                }
+                else if(img.name === 'Selected'){
+                    // 换图片
+                    img.src = 'img/ticket-NA.svg'
+                    img.name = 'NA'
+                    // 计算数量价格
+                    sum --
+                    money -= 45
+                    spanSum.innerHTML = sum
+                    spanMoney.innerHTML = money
+                    // 文本框
+                    letters.delete(img.id)
+                    // inputText.value = Array.from(letters).join(";")
+                    inputText.value = [...letters].join(";")
+                }
+            })
+        })
+
+        // 点击提交
+        submit.addEventListener('click', function() {
+            imgs.forEach(function(img) {
+                // 换图片
+                if(img.name === 'Selected'){
+                    img.src = 'img/ticket-occupied.svg'
+                    img.name = 'Occupied'
+                }
+            })
+            // 重置
+            sum = 0
+            money = 0
+            spanSum.innerHTML = sum
+            spanMoney.innerHTML = money
+            inputText.value = ''
+            letters = new Set()
+        })
+    </script>
+</html>
