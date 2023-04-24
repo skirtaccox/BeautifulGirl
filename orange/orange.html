@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffe4c7, #fff);
+        }
+
+        .box-top {
+            /* display: flex;
+            align-items: center; */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 4px;
+            color: rgb(148, 142, 142);
+        }
+
+        .bta {
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 18px;
+            color: rgb(148, 142, 142);
+        }
+
+        .box-top a:first-child {
+            margin-left: 0px;
+        }
+
+        .change-big {
+            color: #000;
+            font-size: 20px;
+        }
+
+        .search-container {
+            /* display: flex;
+            align-items: center; */
+            background-color: #fff;
+            border-radius: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 10px;
+        }
+
+        .search-container img {
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .search-container input {
+            border: none;
+            margin-left: 5px;
+        }
+
+        .search-container input::placeholder {
+            color: #999;
+        }
+
+        .box-foot {
+            /* display: flex;
+            align-items: center; */
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 4px;
+            color: rgb(121, 119, 119);
+        }
+
+        .box-foot a {
+            margin-left: 25px;
+            font-size: 16px;
+            color: rgb(148, 142, 142);
+        }
+
+        .box-foot a:first-child {
+            margin-left: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            border-radius: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 15px;
+        }
+
+        .box {
+            height: 45px;
+            padding: 5px;
+        }
+
+        .left {
+            margin-right: auto;
+            margin-bottom: 5px;
+            /* background-color: green; */
+            width: 65%;
+        }
+
+        .right {
+            margin-left: auto;
+            /* background-color: red; */
+            width: 20%;
+            text-align: right;
+        }
+
+        .p-keywords {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .p-index {
+            font-size: 12px;
+            color: #7e7777;
+        }
+
+        .p-money {
+            font-size: 26px;
+            font-weight: 900;
+            font-family: "ExtraBold", sans-serif;
+        }
+
+        .p-color {
+            color: #e96f0b;
+        }
+
+        .rectangle {
+            width: 100%;
+            height: 70px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .left-image {
+            position: absolute;
+            left: 0;
+        }
+
+        .left-image img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .right-image {
+            position: absolute;
+            right: 0;
+        }
+
+        .right-image img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .text {
+            text-align: center;
+            text-align: left;
+            width: 68%;
+            font-size: 12px;
+            color: rgb(148, 142, 142);
+        }
+
+        .top-text {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #000;
+        }
+
+        .top-text span {
+            font-weight: normal;
+            font-size: 12px;
+            border-radius: 5px;
+            color: #eb9045;
+            padding: 3px;
+            margin-left: 5px;
+            background-color: #f8e0cde5;
+        }
+
+        .bottom-text img {
+            width: 13px;
+            height: 13px;
+        }
+
+        .introduce {
+            font-size: 12px;
+            line-height: 24px;
+            padding: 10px;
+            color: rgb(119, 115, 115);
+        }
+
+        .btn {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #f55004;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: none;
+            outline: none;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+        .icons div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .middle-icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .z {
+            width: 45px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="box-top">
+            <a class="bta" href="#">笔记</a>|
+            <a class="bta change-big" href="#">达人</a>|
+            <a class="bta" href="#">机构</a>
+        </div>
+        <div class="search-container">
+            <img src=".\img\search.svg" alt="Search Icon">
+            <input type="text" placeholder="搜索">
+        </div>
+        <div class="box-foot">
+            <a href="#">全国</a>&nbsp∨
+            <a href="#">全部科目</a>&nbsp∨
+            <a href="#">达人选项</a>&nbsp∨
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <span class="box left">
+                <p class="p-keywords">外语&nbsp;|&nbsp;文学与国学&nbsp;|&nbsp;教育学</p>
+            </span>
+            <span class="box right">
+                <p class="p-index"><span class="p-color">¥<span class="p-money">120</span></span>/时</p>
+            </span>
+            <div class="rectangle">
+                <div class="left-image">
+                    <img src=".\img\head.png">
+                </div>
+                <div class="right-image">
+                    <img src=".\img\kefu.svg">
+                </div>
+                <div class="text">
+                    <div class="top-text">
+                        毛老师<span>英语</span><span>口才</span><span>主持</span><span>早教</span>
+                    </div>
+                    <div class="bottom-text">
+                        <img src=".\img\adds.svg">
+                        北京市-朝阳区-来广营街道-恒大...
+                    </div>
+                </div>
+            </div>
+            <div class="rectangle introduce">
+                曾在学而思等多家知名机构任教，性格温柔有耐心,对于向学生授课有方式方法。有心理学证书，懂得与孩子沟通达到寓教于乐的学习方式。让孩子爱上学习科目。
+            </div>
+            <div class="rectangle">
+                <button class="btn">预约私教课</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <span class="box left">
+                <p class="p-keywords">外语&nbsp;|&nbsp;文学与国学&nbsp;|&nbsp;教育学</p>
+            </span>
+            <span class="box right">
+                <p class="p-index"><span class="p-color">¥<span class="p-money">120</span></span>/时</p>
+            </span>
+            <div class="rectangle">
+                <div class="left-image">
+                    <img src=".\img\head.png">
+                </div>
+                <div class="right-image">
+                    <img src=".\img\kefu.svg">
+                </div>
+                <div class="text">
+                    <div class="top-text">
+                        毛老师<span>英语</span><span>口才</span><span>主持</span><span>早教</span>
+                    </div>
+                    <div class="bottom-text">
+                        <img src=".\img\adds.svg">
+                        北京市-朝阳区-来广营街道-恒大...
+                    </div>
+                </div>
+            </div>
+            <div class="rectangle introduce">
+                曾在学而思等多家知名机构任教，性格温柔有耐心,对于向学生授课有方式方法。有心理学证书，懂得与孩子沟通达到寓教于乐的学习方式。让孩子爱上学习科目。
+            </div>
+            <div class="rectangle">
+                <button class="btn">预约私教课</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-nav">
+        <div class="icons">
+            <div class="icon">
+                <img src=".\img\shouye-hei.svg" alt="Left Icon 1">
+                <p>首页</p>
+            </div>
+            <div class="z"></div>
+            <div class="icon">
+                <img src=".\img\shouye-hui.svg" alt="Left Icon 2">
+                <p>找课</p>
+            </div>
+            <div class="z"></div>
+            <div class="middle-icon">
+                <img src=".\img\jia.svg" alt="Left Icon 1">
+            </div>
+            <div class="z"></div>
+            <div class="icon">
+                <img src=".\img\shouye-hui.svg" alt="Left Icon 1">
+                <p>消息</p>
+            </div>
+            <div class="z"></div>
+            <div class="icon">
+                <img src=".\img\shouye-hui.svg" alt="Left Icon 2">
+                <p>我的</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    const aList = document.querySelectorAll('.box-top a')
+    console.log(aList)
+    for (let i = 0; i < aList.length; i++) {
+        aList[i].addEventListener('click', function () {
+            console.log("点击了")
+            const removeActive = document.querySelector('.box-top .change-big')
+            if (removeActive) {
+                removeActive.classList.remove('change-big')
+            }
+            this.classList.add('change-big')
+        });
+    }
+
+    const iconList = document.querySelectorAll(".icons .icon")
+    console.log(iconList)
+    for (let i = 0; i < iconList.length; i++) {
+        iconList[i].addEventListener('click', function () {
+            const img = this.querySelector('img')
+            const imgs = document.querySelectorAll('.icons .icon img');
+            for (let j = 0; j < imgs.length; j++) {
+                imgs[j].src = './img/shouye-hui.svg'
+            }
+            img.src = './img/shouye-hei.svg'
+        });
+    }
+</script>
+
+</html>
